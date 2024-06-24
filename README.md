@@ -12,9 +12,10 @@ Persistência de Dados: Os dados dos usuários cadastrados são armazenados em u
 
 Tecnologias Utilizadas
 
-Java
-Visual Studio Code
-Git (opcional, para controle de versão)
+Java,
+Visual Studio Code e 
+Git.
+
 Estrutura do Projeto
 
 O projeto está estruturado da seguinte forma:
@@ -31,7 +32,7 @@ Para executar o projeto no Visual Studio Code, siga os passos abaixo:
 
 Clonar o repositório:
 
-git clone https://exemplo.com/seu-repositorio.git
+git clone https://https://github.com/diegoroverr/projeto_java.git
 Ou baixe o código-fonte diretamente do GitHub.
 
 Abrir o projeto no VS Code:
