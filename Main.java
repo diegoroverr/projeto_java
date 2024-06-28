@@ -18,8 +18,8 @@ public class Main {
     }
 
     private void inicializarAnimais() {
-        animais.add(new Cachorro("Rex", 5));
-        animais.add(new Gato("Mimi", 3));
+        animais.add(new Cachorro("Milo", 5));
+        animais.add(new Gato("Garfield", 3));
         animais.add(new Elefante("Dumbo", 10));
         animais.add(new Papagaio("Louro", 2));
         animais.add(new Tigre("Tigresa", 4));
@@ -27,7 +27,7 @@ public class Main {
         animais.add(new Morcego("Batman", 3));
         animais.add(new Macaco("Cesar", 3));
         animais.add(new Coelho("Pernalonga", 2));
-        animais.add(new Golfinho("Flipper", 15));
+        animais.add(new Golfinho("Finho", 15));
         animais.add(new UrsoPolar("Polar", 6));
         animais.add(new Baleia("Willy", 20));
         animais.add(new Leopardo("Leo", 6));
@@ -104,13 +104,30 @@ public class Main {
             }
 
             if (opcao > 0 && opcao <= animais.size()) {
-                exibirDecorado(animais.get(opcao - 1));
+                Animal animalSelecionado = animais.get(opcao - 1);
+                exibirDecorado(animalSelecionado);
+
+                if (animalSelecionado instanceof Pet) {
+                    ((Pet) animalSelecionado).brincar();
+                    ((Pet) animalSelecionado).levarVeterinario();
+                }
+
+                if (animalSelecionado instanceof Mamifero) {
+                    ((Mamifero) animalSelecionado).amamentar();
+                }
+
+                if (animalSelecionado instanceof Herbivoro) {
+                    ((Herbivoro) animalSelecionado).comerVegetais();
+                } else if (animalSelecionado instanceof Carnivoro) {
+                    ((Carnivoro) animalSelecionado).cacar();
+                }
+
                 System.out.print("Pressione Enter para continuar...");
-                scanner.nextLine(); 
+                scanner.nextLine();
             } else if (opcao != animais.size() + 1) {
                 System.out.println("Opção inválida. Tente novamente.");
                 System.out.print("Pressione Enter para continuar...");
-                scanner.nextLine(); 
+                scanner.nextLine();
             }
 
         } while (opcao != animais.size() + 1);
