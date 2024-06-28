@@ -13,7 +13,7 @@ public class Main {
     public Main() {
         animais = new ArrayList<>();
         inicializarAnimais();
-        usuarios = PersistenciaDados.carregarUsuarios(); // Carregar usuários do arquivo
+        usuarios = PersistenciaDados.carregarUsuarios(); 
         scanner = new Scanner(System.in);
     }
 
@@ -22,19 +22,19 @@ public class Main {
         animais.add(new Gato("Mimi", 3));
         animais.add(new Elefante("Dumbo", 10));
         animais.add(new Papagaio("Louro", 2));
-        animais.add(new Tigre("Rajah", 4));
-        animais.add(new Urso("Baloo", 8));
-        animais.add(new Morcego("Draco", 3));
-        animais.add(new Macaco("George", 3));
-        animais.add(new Coelho("Bugs", 2));
+        animais.add(new Tigre("Tigresa", 4));
+        animais.add(new Urso("Koda", 8));
+        animais.add(new Morcego("Batman", 3));
+        animais.add(new Macaco("Cesar", 3));
+        animais.add(new Coelho("Pernalonga", 2));
         animais.add(new Golfinho("Flipper", 15));
-        animais.add(new UrsoPolar("Snowy", 6));
+        animais.add(new UrsoPolar("Polar", 6));
         animais.add(new Baleia("Willy", 20));
-        animais.add(new Leopardo("Leapy", 6));
-        animais.add(new Lince("Whiskers", 4));
-        animais.add(new Panda("Bamboo", 12));
+        animais.add(new Leopardo("Leo", 6));
+        animais.add(new Lince("Lili", 4));
+        animais.add(new Panda("Poo", 12));
         animais.add(new Orangotango("Chico", 9));
-        animais.add(new Suricato("Timon", 3));
+        animais.add(new Suricato("Timão", 3));
         animais.add(new PorquinhoDaIndia("Pipoca", 1));
     }
 
@@ -106,11 +106,11 @@ public class Main {
             if (opcao > 0 && opcao <= animais.size()) {
                 exibirDecorado(animais.get(opcao - 1));
                 System.out.print("Pressione Enter para continuar...");
-                scanner.nextLine(); // Esperar o usuário pressionar Enter
+                scanner.nextLine(); 
             } else if (opcao != animais.size() + 1) {
                 System.out.println("Opção inválida. Tente novamente.");
                 System.out.print("Pressione Enter para continuar...");
-                scanner.nextLine(); // Esperar o usuário pressionar Enter
+                scanner.nextLine(); 
             }
 
         } while (opcao != animais.size() + 1);
@@ -128,7 +128,7 @@ public class Main {
             System.out.println("------------------------------------------");
         }
         System.out.println("Pressione Enter para voltar ao menu principal...");
-        scanner.nextLine(); // Esperar o usuário pressionar Enter
+        scanner.nextLine(); 
     }
 
     private void exibirDecorado(Animal animal) {
@@ -164,7 +164,7 @@ public class Main {
 
         System.out.println("Usuário cadastrado com sucesso!");
         System.out.println("Pressione Enter para continuar...");
-        scanner.nextLine(); // Esperar o usuário pressionar Enter
+        scanner.nextLine(); 
     }
 
     public static void main(String[] args) {
