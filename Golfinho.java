@@ -29,6 +29,6 @@ public class Golfinho extends Animal implements Mamifero {
 
     @Override
     public void amamentar() {
-        // Implementação específica de mamífero (não aplicável para golfinho)
+        
     }
 }
