@@ -39,6 +39,6 @@ public class Cachorro extends Animal implements Pet, Mamifero {
 
     @Override
     public void amamentar() {
-        // Implementação específica de mamífero (não aplicável para cachorro)
+        
     }
 }
